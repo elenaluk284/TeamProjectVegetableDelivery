@@ -1,0 +1,85 @@
+.text_cards1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+ }
+
+.text_cards2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+ }
+
+.wrapper {
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+ }
+
+.cards {
+   background-color: rgba(234,247,229,1);
+   height: 400px;
+   width: 324px;
+   border-radius: 20px;
+   padding-left: 30px;
+   padding-right: 30px;
+   padding-top: 30px;
+   padding-bottom: 0px;
+ }
+
+.cards:hover {
+    filter: brightness(0.9);
+ }
+
+.cards-title {
+    font-family: "DM Sans", sans-serif;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 550;
+ }
+
+.cards_img {
+    height: 261px;
+    width: 321px;
+ }
+
+.cards_sub1 {
+    font-size: 20px;
+    font-weight: 300;
+ }
+
+.cards_sub2 {
+    font-size: 20px;
+    font-weight: 300;
+ }
+
+.round {
+   width: 115px; 
+   height: 115px; 
+   background-color:  rgba(252, 138, 17, 1); 
+   border-radius: 50%; 
+   margin-top: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 100px;
+   display: flex;
+   border:none;
+   justify-content: center;
+   align-items: center;
+ }
+  
+.round:hover {
+  background-color:rgb(161, 196, 135); 
+ }

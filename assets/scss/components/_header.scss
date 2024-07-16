@@ -1,0 +1,151 @@
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 0 33px;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr max-content;
+    align-items: center;
+    @include DM-sans(normal, 400, 14px, 50px);
+    @media (max-width: 767px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+    }
+    .header__menu {
+        width: 241px;
+        .menu__list {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
+            .list__item {
+                @media (max-width: 767px) {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            .list__item a {
+                @media (max-width: 767px) {
+                    color: white;
+                }
+            }
+            .list__item a:hover {
+                opacity: 0.5;
+            }
+        }
+        @media (max-width: 767px) {
+            display: none;
+            position: fixed;
+            top: 50px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $primary-color;
+            z-index: 50;
+            animation: burger-animation 0.4s;
+        }
+    }
+    .logo-block {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        @include DM-sans(normal, 700, 14px, 18px);
+        .logo-block__logo {
+            margin-right: 8px;
+            width: 16px;
+        }
+    }
+    .header__basket {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @media (max-width: 767px) {
+            display: none;
+        }
+        .basket-image {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .basket-image:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+}
+
+.burger {
+    display: none;
+    width: 20px;
+    height: 14px;
+    position: relative;
+    align-items: center;
+    z-index: 10;
+    @media (max-width: 767px) {
+        display: flex;
+    }
+    span {
+        height: 2px;
+        width: 100%;
+        background-color: $primary-color;
+    }
+}
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: $primary-color;
+    transition: all 0.3s ease 0s;
+}
+.burger::before {
+    top: 0;
+    width: 50%;
+}
+.burger::after {
+    bottom: 0;
+    width: 70%;
+}
+
+.burger.active span {
+    transform: scale(0);
+}
+
+.burger.active::before {
+    width: 100%;
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    width: 100%;
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+@keyframes burger-animation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.open {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+

@@ -1,0 +1,186 @@
+.container {
+    max-width: 100%;
+    @media screen and (max-width: 768px) {
+        margin-top: 20px;
+    }
+}
+.container__howOrder {
+    margin: 20px;
+    margin-bottom: 50px;
+    max-width: 100%;
+}
+.howOrder__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    @media screen and (max-width: 620px) {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 15% 15%;
+    }
+}
+.howOrder__h2 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    @include DM-sans(normal, 500, 48px, 104%);
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+        @include DM-sans(normal, 200, 32px, 104%);
+    }
+    @media screen and (max-width: 620px) {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    @media screen and (max-width: 376px) {
+        @include DM-sans(normal, 200, 25px, 104%);
+    }
+}
+
+.text__ourbasket {
+    @include DM-sans(normal, 400, 18px, 133%);
+    margin: 10px;
+    @media screen and (max-width: 768px) {
+        @include DM-sans(normal, 200, 14px, 133%);
+    }
+}
+.text__ourbasket_partLeft {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-bottom: 20px;
+    @media screen and (max-width: 620px) {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+}
+.text__ourbasket_partRight {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media screen and (max-width: 620px) {
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+}
+.container__photo {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    @media screen and (max-width: 768px) {
+        align-items: center;
+    }
+    @media screen and (max-width: 620px) {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        max-width: 370px;
+    }
+}
+.threeSteps {
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr 8fr;
+    grid-template-rows: repeat(5, 1fr);
+    background-color: rgb(250, 243, 231);
+    border: 1px solid #ffffff;
+    border-radius: 80px;
+    max-width: 100%;
+    height: auto;
+    background: url(../img/bgs.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+    @media screen and (max-width: 376px) {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+}
+.threeSteps_img {
+    grid-column: 1/2;
+    grid-row: 2/6;
+    background-color: rgb(250, 243, 231);
+    border-radius: 80px;
+    width: 100%;
+    height: auto;
+    background: url(../img/bgs.svg);
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 376px) {
+        display: none;
+    }
+}
+
+.threeSteps__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-column: 4/5;
+    grid-row: 2/6;
+    margin: 0;
+    @media screen and (max-width: 376px) {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+}
+
+.threeSteps__text span {
+    @include DM-sans(normal, 400, 14px, 129%);
+    margin: 5px;
+}
+.threeSteps__text h2 {
+    @include DM-sans(normal, 400, 14px, 18px);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+        @include DM-sans(normal, 100, 14px, 104%);
+    }
+}
+
+.threeSteps__text p {
+    @include DM-sans(normal, 400, 14px, 18px);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.04em;
+}
+.stepNumber {
+    display: inline-block;
+    max-height: 14px;
+    max-width: 10px;
+    border-radius: 50px;
+    padding: 10px 14px;
+    background-color: $primary-color;
+}
+.threeSteps_imgForMob{
+    display: none;
+    @media screen and (max-width: 376px) {
+        display: block;
+    }
+
+}
+.discount__text {
+    color: #f9f7f4;
+    padding: 10px;
+    white-space: nowrap; 
+    overflow: hidden;
+    @include DM-sans(italic, 500, 39px, 120%);
+    margin: 0;
+    @media screen and (max-width: 768px) {
+        @include DM-sans(italic, 100, 22px, 104%);
+    }
+}
+.discount__text_Up {
+    background-color: $secondary-color;
+    transform: rotate(2deg); 
+    
+}
+.discount__text_Down {
+    background-color: $primary-color;
+    transform: rotate(-2deg);
+}
